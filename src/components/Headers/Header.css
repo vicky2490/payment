@@ -1,0 +1,35 @@
+.header {
+  height: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.gray {
+  background-color: #B3ABA6;
+  width: 140px;
+}
+
+.orange {
+  background-color: #FF8F14;
+  width: 220px;
+}
+
+.deep-blue {
+  background-color: #173060;
+  width: 95px;
+}
+
+.pink {
+  background-color: #F65453;
+  width: 230px;
+}
+
+.red {
+  background-color: #CC251B;
+  width: 190px;
+}
+
+.blue {
+  background-color: #62A1D2;
+  width: 149px;
+}

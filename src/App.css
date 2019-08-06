@@ -1,33 +1,71 @@
-.App {
-  text-align: center;
+.wrap {
+  width: 1024px;
+  height: 1080px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.progress-bar {
+  /* outline: 3px solid yellow; */
+  width: 680px;
+  height: 99px;
+  margin: 0 auto;
+  margin-top: 30px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
-.App-link {
-  color: #61dafb;
+.progress-bar h1 {
+  color: #173060;
+  font-size: 30px;
+  line-height: 45px;
+  margin-bottom: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.progress {
+  /* outline: 3px solid red; */
+  height: 39px;
+  width: 680px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.point {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.point-blue {
+  background-color: #62A1D2;
+}
+
+.point-gray {
+  background-color: #B3ABA6;
+}
+
+.line {
+  width: 327px;
+  height: 0;
+  z-index: -1;
+}
+
+.line-gray {
+  border: 3px solid #B3ABA6;
+}
+
+.line-blue {
+  border: 3px solid #B3ABA6;
+}
+
+.step-word {
+  height: 20px;
+  color: #B3ABA6;
+  font-family: Noto Sans TC;
+  font-size: 14px;
+  line-height: 20px;
+  /* margin-left: 92px; */
+  padding-top: 8.5px;
+  text-align: center;
 }
