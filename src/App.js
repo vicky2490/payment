@@ -27,7 +27,18 @@ class App extends Component {
               <div className="point point-gray"></div>
           </div>
         </div>
-        <div className="order-content"></div>
+        <div className="order-content">
+          <h2>確認訂單金額</h2>
+          <div>
+            <div className="products-content">
+              <div className="order-no">訂單編號 201907310111</div>
+            </div>
+            <div className="triangle-box">
+              <div className="triangle"></div>            
+            </div>
+          </div>
+
+        </div>
         <div className="payment-content"></div>
         <div className="precautions"></div>
         <div className="footer"></div>

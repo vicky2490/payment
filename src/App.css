@@ -1,7 +1,8 @@
 .wrap {
   width: 1024px;
-  height: 1080px;
+  height: 1030px;
   margin: 0 auto;
+  padding: 0 47px;
 }
 
 .progress-bar {
@@ -13,6 +14,7 @@
   display: flex;
   flex-wrap:wrap;
   justify-content:center;
+  margin-bottom: 35px;
 }
 
 .progress-bar h1 {
@@ -62,10 +64,51 @@
 .step-word {
   height: 20px;
   color: #B3ABA6;
-  font-family: Noto Sans TC;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: bold;  
   font-size: 14px;
   line-height: 20px;
   /* margin-left: 92px; */
   padding-top: 8.5px;
   text-align: center;
+}
+
+.order-content h2 {
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #62A1D2;
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.products-content {
+  width: 930px;
+  height: 411px;
+  border: 2px solid #62A1D2;
+  border-radius: 10px 10px;
+  padding: 20px 29px 22px 20px;
+}
+
+.triangle-box {
+  display: flex;  
+  justify-content:center;
+  height: 10px;
+  width: 930px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 15px 0 15px;
+  border-color: #62A1D2 transparent transparent transparent;
+}
+
+.order-no {
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #505050;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 23px;
 }
