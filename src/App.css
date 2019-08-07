@@ -1,7 +1,10 @@
 .wrap {
   width: 1024px;
-  height: 1030px;
+  height: 1080px;
   margin: 0 auto;
+}
+
+.content {
   padding: 0 47px;
 }
 
@@ -73,7 +76,7 @@
   text-align: center;
 }
 
-.order-content h2 {
+h2 {
   font-family: 'Noto Sans TC', sans-serif;
   color: #62A1D2;
   font-size: 22px;
@@ -95,6 +98,7 @@
   justify-content:center;
   height: 10px;
   width: 930px;
+  margin-bottom: 40px;
 }
 
 .triangle {
@@ -111,4 +115,198 @@
   font-size: 18px;
   line-height: 27px;
   margin-bottom: 23px;
+}
+
+.product {
+  width: 882.5px;
+  height: 120px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid #B3ABA6;
+}
+
+.pay-box {
+  width: 150px;
+  height: 100px;
+  margin-right: 30px;
+}
+
+.notebook {
+  background-image: url('./img/ipadpro-9_TP_V4.png');
+}
+
+.headset {
+  background-image: url('./img/headphoneIMGL4494_TP_V4.png');
+}
+
+.product-description {
+  width: 351px;
+  height: 91px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 69px;
+}
+
+.item-title {
+  font-size: 18px;
+  line-height: 27px;
+  color: #505050;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.item-description {
+  font-size: 14px;
+  line-height: 22px;
+  color: #B3ABA6;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.control {
+  width: 281px;
+  height: 100px;
+  display: flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+.buy-item-count {
+  width: 140px;
+  height: 30px;
+  display: flex;
+  justify-content:center;
+}
+
+.buy-item-control {
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  border: 1px solid #B3ABA6;
+  border-radius: 2px 0px 0px 2px;
+  background-position:center;  
+}
+
+.less {
+  background-image: url('./img/icon_less.svg');
+}
+
+.num {
+  height: 30px;
+  width: 80px;
+  border-top: 1px solid #B3ABA6;
+  border-bottom: 1px solid #B3ABA6;
+  text-align: center;
+  line-height: 30px;
+}
+
+.plus {
+  background-image: url('./img/icon_add.svg');
+}
+
+.price {
+  width: 62px;
+  height: 27px;
+  color: #505050;
+  font-size: 18px;
+  line-height: 22px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.remove {
+  background-image: url('./img/order_btn_delete_normal.svg');
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-position:center;  
+}
+
+.total-price {
+  display: flex;
+  justify-content:flex-end;
+  padding-top: 23px;
+  height: 54px;
+  align-items:flex-end;
+}
+
+.total-word {
+  color: #62A1D2;
+  font-size: 18px;
+  /* line-height: 27px; */
+  font-family: 'Noto Sans TC', sans-serif;
+  text-align: center;
+  height: 27px;
+  width: 42px;
+  margin-right: 85px;
+}
+
+.price-all {
+  color: #62A1D2;
+  font-size: 24px;
+  line-height: 36px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: bold;
+}
+
+.payment-content {
+  margin-top: 15px;
+  display: flex;
+  width: 930px;
+  justify-content:space-between;
+}
+
+.payment-box {
+  width: 290px;
+  height: 130px;
+  border: 2px solid #62A1D2;
+  border-radius: 10px 10px;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  margin-bottom: 30px;
+}
+
+.payment-icon {
+  background-repeat: no-repeat;
+  background-position:center;  
+  width: 120px;
+  height: 70px;
+}
+
+.credit-card {
+  background-image: url('./img/icon_PayByCard.svg');
+}
+
+.atm {
+  background-image: url('./img/icon_PayByATM.svg');
+}
+
+.shop {
+  background-image: url('./img/icon_PayByShop.svg');
+}
+
+.payment-description {
+  color: #62A1D2;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.precautions {
+  width: 930px;
+  height: 94px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #B3ABA6;
+  margin-bottom: 60px;
+}
+
+.footer {
+  height: 50px;
+  background-color: #173060;
+  color: #B3ABA6;
+  font-size: 12px;
+  line-height: 50px;
+  text-align: center;
 }
