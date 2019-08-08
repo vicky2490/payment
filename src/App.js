@@ -1,14 +1,74 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Headers/Header';
+import Product from './components/Products/Product';
+import PayMethod from './components/PayMethods/PayMethod';
+import _ from 'lodash';
 
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
+      buyItems:[{
+        name: 'notebook',
+        description: 'notebook is so good',
+        count: 1,
+        price: 1000,
+      },{
+        name: 'headset',
+        description: 'headset is good',        
+        count: 1,
+        price: 1000,        
+      }],
+      payMethods: [{
+        method: 'credit-card',
+        description: '使用信用卡付款',
+      },{
+        method: 'atm',
+        description: '使用WebATM付款',
+      },{
+        method: 'shop',
+        description: '使用超商代碼付款',
+      }],
     } 
   }
+
+  less = (index) => {
+    console.log('less', index);
+    let buyItems = _.clone(this.state.buyItems);
+    if (buyItems[index].count === 0) {
+      console.log('不能小於0');
+      return;
+    }
+    buyItems[index].count = buyItems[index].count -1;
+    buyItems[index].price = buyItems[index].price -1000;
+    this.setState({
+      buyItems,
+    });
+  }
+  
+  plus = (index) => {
+    console.log('plus', index);
+    let buyItems = _.clone(this.state.buyItems);
+    buyItems[index].count = buyItems[index].count +1;
+    buyItems[index].price = buyItems[index].price +1000;
+    this.setState({
+      buyItems,
+    });
+  }
+
+  getTotalProce = () => {
+    return _.sum(_.map(this.state.buyItems, 'price'));
+  }
+  removeItem = (index) => {
+    let buyItems = _.clone(this.state.buyItems);
+    buyItems.splice(index, 1);
+    this.setState({
+      buyItems,
+    });
+  }
+
   render() {
     return (
       <div className="wrap">
@@ -33,41 +93,12 @@ class App extends Component {
           <div>
             <div className="products-content">
               <div className="order-no">訂單編號 201907310111</div>
-              <div className="product">
-                <div className="pay-box notebook"></div>
-                <div className="product-description">
-                  <div className="item-title">商品名稱商品名稱商品名稱商品名稱</div>
-                  <div className="item-description">商品說明商品說明商品說明商品說明商品說明商品說明商品說明商品說明商品說明商品說明...</div>
-                </div>
-                <div className="control">
-                  <div className="buy-item-count">
-                    <div className="buy-item-control less"></div>
-                    <div className="num">1</div>
-                    <div className="buy-item-control plus"></div>
-                  </div>
-                  <div className="price">$ 1,000</div>
-                  <div className="remove"></div>
-                </div>
-              </div>
-              <div className="product">
-                <div className="pay-box headset"></div>
-                <div className="product-description">
-                  <div className="item-title">商品名稱商品名稱商品名稱商品名稱</div>
-                  <div className="item-description">商品說明商品說明商品說明商品說明商品說明商品說明商品說明商品說明商品說明商品說明...</div>
-                </div>
-                <div className="control">
-                  <div className="buy-item-count">
-                    <div className="buy-item-control less"></div>
-                    <div className="num">1</div>
-                    <div className="buy-item-control plus"></div>
-                  </div>
-                  <div className="price">$ 1,000</div>
-                  <div className="remove"></div>
-                </div>
-              </div>
+               {this.state.buyItems.map((item, i) => <Product key={i} index={i} item={item} less={(index) => this.less(index)} plus={(index) => this.plus(index)} removeItem={(index) => this.removeItem(index)}/>)}
               <div className="total-price">
                 <div className="total-word">Total</div>
-                <div className="price-all">$2,000</div>
+                <div className="price-all-box">
+                  <div className="price-all">{`$${this.getTotalProce()}`}</div>                  
+                </div>
               </div>
             </div>
             <div className="triangle-box">
@@ -77,18 +108,7 @@ class App extends Component {
         </div>
           <h2>選擇付款方式</h2>
           <div className="payment-content">
-            <div className="payment-box">
-              <div className="payment-icon credit-card"></div>
-              <div className="payment-description">使用信用卡付款</div>
-            </div>
-            <div className="payment-box">
-              <div className="payment-icon atm"></div>
-              <div className="payment-description">使用WebATM付款</div>
-            </div>
-            <div className="payment-box">
-              <div className="payment-icon shop"></div>
-              <div className="payment-description">使用超商代碼付款</div>
-            </div>
+               {this.state.payMethods.map((payMethod, i) => <PayMethod key={i} payMethod={payMethod} less={(index) => this.less(index)}/>)}
           </div>
           <div className="precautions">
           注意事項<br/>

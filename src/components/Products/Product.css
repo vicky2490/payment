@@ -1,0 +1,106 @@
+.product {
+  width: 882.5px;
+  height: 120px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid #B3ABA6;
+}
+
+.pay-box {
+  width: 150px;
+  height: 100px;
+  margin-right: 30px;
+}
+
+.notebook {
+  background-image: url('../../img/ipadpro-9_TP_V4.png');
+}
+
+.headset {
+  background-image: url('../../img/headphoneIMGL4494_TP_V4.png');
+}
+
+.product-description {
+  width: 351px;
+  height: 91px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 69px;
+}
+
+.item-title {
+  font-size: 18px;
+  line-height: 27px;
+  color: #505050;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.item-description {
+  font-size: 14px;
+  line-height: 22px;
+  color: #B3ABA6;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.control {
+  width: 281px;
+  height: 100px;
+  display: flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+.buy-item-count {
+  width: 140px;
+  height: 30px;
+  display: flex;
+  justify-content:center;
+}
+
+.buy-item-control {
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  border: 1px solid #B3ABA6;
+  border-radius: 2px 0px 0px 2px;
+  background-position:center;  
+  cursor: pointer; 
+  outline: none;
+}
+
+.less {
+  background-image: url('../../img/icon_less.svg');
+}
+
+.num {
+  height: 30px;
+  width: 80px;
+  border-top: 1px solid #B3ABA6;
+  border-bottom: 1px solid #B3ABA6;
+  text-align: center;
+  line-height: 30px;
+}
+
+.plus {
+  background-image: url('../../img/icon_add.svg');
+}
+
+.price {
+  width: 62px;
+  height: 27px;
+  color: #505050;
+  font-size: 18px;
+  line-height: 22px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.remove {
+  background-image: url('../../img/order_btn_delete_normal.svg');
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-position:center;  
+  cursor: pointer;   
+}

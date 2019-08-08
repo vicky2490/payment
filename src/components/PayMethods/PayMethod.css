@@ -1,0 +1,43 @@
+.payment-box {
+  width: 290px;
+  height: 130px;
+  border: 2px solid #62A1D2;
+  border-radius: 10px 10px;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  margin-bottom: 30px;
+  cursor: pointer;     
+  outline: none;
+}
+
+.payment-box:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.payment-icon {
+  background-repeat: no-repeat;
+  background-position:center;  
+  width: 120px;
+  height: 70px;
+}
+
+.credit-card {
+  background-image: url('../../img/icon_PayByCard.svg');
+}
+
+.atm {
+  background-image: url('../../img/icon_PayByATM.svg');
+}
+
+.shop {
+  background-image: url('../../img/icon_PayByShop.svg');
+}
+
+.payment-description {
+  color: #62A1D2;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
