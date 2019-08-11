@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/payment/static/css/main.2cce8147.chunk.css",
-    "main.js": "/payment/static/js/main.e663f702.chunk.js",
-    "main.js.map": "/payment/static/js/main.e663f702.chunk.js.map",
+    "main.css": "/payment/static/css/main.971fa65b.chunk.css",
+    "main.js": "/payment/static/js/main.a3e8dc5d.chunk.js",
+    "main.js.map": "/payment/static/js/main.a3e8dc5d.chunk.js.map",
     "runtime~main.js": "/payment/static/js/runtime~main.f0fb4899.js",
     "runtime~main.js.map": "/payment/static/js/runtime~main.f0fb4899.js.map",
-    "static/js/2.b41502e9.chunk.js": "/payment/static/js/2.b41502e9.chunk.js",
-    "static/js/2.b41502e9.chunk.js.map": "/payment/static/js/2.b41502e9.chunk.js.map",
+    "static/js/2.8d2db2fe.chunk.js": "/payment/static/js/2.8d2db2fe.chunk.js",
+    "static/js/2.8d2db2fe.chunk.js.map": "/payment/static/js/2.8d2db2fe.chunk.js.map",
     "index.html": "/payment/index.html",
-    "precache-manifest.d78dd03bf66b7e09905a365cd65e004e.js": "/payment/precache-manifest.d78dd03bf66b7e09905a365cd65e004e.js",
+    "precache-manifest.ae94c6c4e0d28cd9aab6604fa0f3444b.js": "/payment/precache-manifest.ae94c6c4e0d28cd9aab6604fa0f3444b.js",
     "service-worker.js": "/payment/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/payment/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/payment/static/media/logo.5d5d9eef.svg"
+    "static/css/main.971fa65b.chunk.css.map": "/payment/static/css/main.971fa65b.chunk.css.map",
+    "static/media/Product.css": "/payment/static/media/order_btn_delete_normal.f1ffbcbc.svg",
+    "static/media/CreditCard.css": "/payment/static/media/icon_question.0b175cbb.svg",
+    "static/media/PayMethod.css": "/payment/static/media/icon_PayByShop.e80fbf55.svg"
   }
 }
