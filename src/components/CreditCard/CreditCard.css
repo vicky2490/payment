@@ -1,0 +1,210 @@
+.payment-order-detail {
+  width: 610px;
+  height: 95px;
+  border-radius: 10px 10px;
+  padding-left: 26px;
+  display: flex;
+  align-items:center;
+  background-color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.payment-table-order-price {
+  height: 45px;
+  width: 95px;
+  line-height: 45px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: bold;  
+  font-size: 30px;
+  color: #62A1D2;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content:space-between;
+  align-items:center;  
+  width: 171px;
+  height: 45px;
+  margin-right: 88px;   
+}
+
+.table-field {
+  color: #505050;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.field-right {
+  margin-right: 15px; 
+}
+
+.credit-card-icon {
+  width: 65px;
+  height: 45px;
+}
+
+.visa-icon {
+  background-image: url('../../img/icon_VISA.svg');
+}
+
+.master-icon {
+  background-image: url('../../img/icon_Master.svg');  
+}
+
+.jcb-icon {
+  background-image: url('../../img/icon_JCB.svg');  
+}
+
+.card-table {
+  width: 610px;
+  height: 600px;
+  background-color: #FFFFFF;
+  border-radius: 10px 10px;
+  margin-bottom: 38px;
+  padding: 15px 24.31px 32px 24.5px;  
+}
+
+.fields {
+  width: 561.19px;
+  height: 65.51px;
+  border-bottom: 1px solid #F0EEED;
+  padding-bottom: 15.51px;
+  margin-bottom: 16.49px;
+}
+
+.fields-bottom {
+  margin-bottom: 6.49px;  
+}
+
+.field {
+  display: flex;
+  align-items:center;
+  position: relative;
+}
+
+.field-name-box {
+  width: 118px;
+  height: 20px;
+}
+
+.field input {
+  height: 50px;  
+  width: 280px;
+  border: 1px solid #B3ABA6;
+  border-radius: 5px 5px;  
+  color: #505050;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Noto Sans TC', sans-serif;
+  padding: 13px 0 13px 15px;  
+  outline: none;
+}
+
+.legend-box input{
+  width: 247.5px; 
+  height: 22px; 
+  border: none;
+  border-radius: unset;  
+}
+
+.legend-box {
+  height: 50px;  
+  width: 280px;
+  display: flex;
+  align-items:center;    
+  border: 1px solid #B3ABA6;
+  border-radius: 5px 5px;    
+}
+
+.legend-icon {
+  background-image: url('../../img/icon_question.svg');  
+  height: 22px;
+  width: 22px;  
+  outline: none;
+  cursor: pointer;   
+  border: none;    
+}
+
+.exp-icon {
+  background-image: url('../../img/Web_order_hit01.png');    
+  width: 150px;
+  height: 60px;
+  right: 0;
+  position: absolute;
+}
+
+.security-code-icon {
+  background-image: url('../../img/Web_order_hit02.png');      
+  width: 150px;
+  height: 60px;
+  right: 0;
+  position: absolute;
+}
+
+.reset-margin-bottom {
+  margin-bottom: 8.49px;  
+}
+
+.card-precautions {
+  font-size: 12px;
+  color: #B3ABA6;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.card-precautions li {
+  list-style-type: disc;
+  margin-left: 16px;
+}
+
+.btn-box {
+  height: 50px;
+  width: 395px;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;  
+  margin-left: 108px;
+}
+
+.card-table-btn {
+  border-radius: 28px 28px;  
+  width: 180px;
+  height: 50px;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 50px;
+  font-family: 'Noto Sans TC', sans-serif;  
+  text-align: center;
+  cursor: pointer;     
+  outline: none;
+}
+
+.back {
+  background-color: #62A1D2;
+}
+
+.send {
+  background-color: #FF8F14;  
+}
+
+.error-icon {
+  margin-left: 7.5px;
+  margin-right: 4px;
+  height: 15px;
+  width: 15px;
+  background-image: url('../../img/icon_notice.svg');        
+}
+
+.error-message {
+  font-size: 12px;
+  color: #F65453;
+  line-height: 18px;
+  font-family: 'Noto Sans TC', sans-serif;    
+}
+
+input[type="password"] {
+  font: small-caption;
+  font-size:16px;
+  color: #505050;
+}

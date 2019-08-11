@@ -3,6 +3,9 @@ import './App.css';
 import Header from './components/Headers/Header';
 import Product from './components/Products/Product';
 import PayMethod from './components/PayMethods/PayMethod';
+import Progress from './components/Progress/Progress';
+import CreditCard from './components/CreditCard/CreditCard';
+import PaidComplete from './components/PaidComplete/PaidComplete';
 import _ from 'lodash';
 
 class App extends Component {
@@ -58,7 +61,7 @@ class App extends Component {
     });
   }
 
-  getTotalProce = () => {
+  getTotalPrice = () => {
     return _.sum(_.map(this.state.buyItems, 'price'));
   }
   removeItem = (index) => {
@@ -70,55 +73,59 @@ class App extends Component {
   }
 
   render() {
+     const payMethodParams = this.props.match.params.method;
+     const payStatusParams = this.props.match.params.status;
+     const paidMethodParams = this.props.match.params.paidMethod;
+     let stepActive;
+     if (payMethodParams) {
+       stepActive = 'twoStep';
+     } else if (payStatusParams === 'complete') {
+       stepActive = 'complete';
+     }
+     const totalPrice = this.getTotalPrice();
     return (
       <div className="wrap">
         {<Header/>}
         <div className="content">
-          <div className="progress-bar">
-            <h1>訂單資訊</h1>
-            <div className="progress">
-                <div className="point point-blue"></div>
-                <div className="line line-gray">
-                  <div className="step-word">Step1 選定支付方式</div>
-                </div>
-                <div className="point point-gray"></div>
-                <div className="line line-gray">
-                  <div className="step-word">Step2 輸入信用卡資訊或取得支付代碼</div>
-                </div>
-                <div className="point point-gray"></div>
-            </div>
-          </div>
-          <div className="order-content">
-          <h2>確認訂單金額</h2>
-          <div>
-            <div className="products-content">
-              <div className="order-no">訂單編號 201907310111</div>
-               {this.state.buyItems.map((item, i) => <Product key={i} index={i} item={item} less={(index) => this.less(index)} plus={(index) => this.plus(index)} removeItem={(index) => this.removeItem(index)}/>)}
-              <div className="total-price">
-                <div className="total-word">Total</div>
-                <div className="price-all-box">
-                  <div className="price-all">{`$${this.getTotalProce()}`}</div>                  
+          <Progress stepActive={stepActive}/>
+ 
+          <div className={(payMethodParams || payStatusParams) ? "hidden-content" : ""}>
+            <h2>確認訂單金額</h2>
+            <div>
+              <div className="products-content">
+                <div className="order-no">訂單編號 201907310111</div>
+                {this.state.buyItems.map((item, i) => <Product key={i} index={i} item={item} less={(index) => this.less(index)} plus={(index) => this.plus(index)} removeItem={(index) => this.removeItem(index)}/>)}
+                <div className="total-price">
+                  <div className="total-word">Total</div>
+                  <div className="price-all-box">
+                    <div className="price-all">{`$${totalPrice}`}</div>                  
+                  </div>
                 </div>
               </div>
+              <div className="triangle-box">
+                <div className="triangle"></div>            
+              </div>
             </div>
-            <div className="triangle-box">
-              <div className="triangle"></div>            
-            </div>
           </div>
+          {payStatusParams !== 'complete' && <h2>選擇付款方式</h2>}
+          <div className={payStatusParams === 'complete' ? "hidden-content" : "payment-content"}>
+               {this.state.payMethods.map((payMethod, i) => <PayMethod key={i} payMethod={payMethod} payMethodParams={payMethodParams}/>)}
+          </div>
+          <ul className={(payMethodParams || payStatusParams) ? "hidden-content" : "precautions"}>
+            注意事項
+            <li>假文字假文字假文字假文字假文字，假文字假文字假文字假文字。</li>
+            <li>這也是假文字假文字假文字，假文字假文字假文字。</li>
+            <li>這還是假文字假文字，假文字假文字假文字假文字。</li>
+          </ul>
         </div>
-          <h2>選擇付款方式</h2>
-          <div className="payment-content">
-               {this.state.payMethods.map((payMethod, i) => <PayMethod key={i} payMethod={payMethod} less={(index) => this.less(index)}/>)}
-          </div>
-          <div className="precautions">
-          注意事項<br/>
-          假文字假文字假文字假文字假文字，假文字假文字假文字假文字。<br/>
-          這也是假文字假文字假文字，假文字假文字假文字。<br/>
-          這還是假文字假文字，假文字假文字假文字有夠多的假文字。<br/>
-          </div>
-        </div>
+      {payStatusParams === 'complete' && <div className="payment-table">
+        {payStatusParams === 'complete' && <PaidComplete paidMethodParams={paidMethodParams}/>}
+      </div>}
+      {payMethodParams && <div className="payment-table">
+        {payMethodParams === 'credit-card' && <CreditCard totalPrice={totalPrice}/>}
+      </div>}
       <div className="footer">Copy right Hello I'm Footer :)</div>
-      </div>
+      </div>  
     );
   }
 }

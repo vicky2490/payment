@@ -1,0 +1,40 @@
+.paid-box {
+  width: 610px;
+  height: 210px;
+  background-color: #FFFFFF;
+  border-radius: 10px 10px;
+  margin-top: 75px;
+  padding: 30px 119px;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.paid-title {
+  color: #62A1D2;
+  font-size: 22px;
+  line-height: 33px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.paid-content {
+  color: #505050;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: 'Noto Sans TC', sans-serif;  
+  margin-bottom: 25px;  
+}
+
+.paid-back-btn {
+  width: 180px;
+  height: 50px;
+  background-color: #FF8F14;
+  border-radius: 28px 28px; 
+  font-size: 16px;
+  line-height: 24px; 
+  color: #FFFFFF;
+  cursor: pointer;     
+  outline: none;
+}
